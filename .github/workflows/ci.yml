@@ -49,13 +49,6 @@ jobs:
           forge coverage --report lcov
         id: coverage
 
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3
-        with:
-          files: ./lcov.info
-          token: ${{ secrets.CODECOV_TOKEN }}
-          fail_ci_if_error: false
-
       - name: Run Forge fmt check
         run: |
           forge fmt --check
