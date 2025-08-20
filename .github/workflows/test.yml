@@ -39,3 +39,8 @@ jobs:
         run: |
           forge test -vvv
         id: test
+
+      - name: Run Forge Coverage
+        run: |
+          forge coverage --report summary
+        id: coverage  
