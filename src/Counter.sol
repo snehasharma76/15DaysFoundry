@@ -11,4 +11,9 @@ contract Counter {
     function increment() public {
         number++;
     }
+
+     function decrement() public {
+        require(number > 0, "Counter: cannot decrement below zero");
+        number--;
+    }
 }
